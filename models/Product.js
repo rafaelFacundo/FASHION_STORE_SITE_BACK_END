@@ -11,6 +11,8 @@ const productSchema = new Schema(
     category: { type: String, require: true },
     stock: { type: Number, require: true },
     colors: { type: [String], require: true },
+    mainNews: { type: Boolean, require: true },
+    mainProduct: { type: Boolean, require: true },
   },
   { timestamps: true }
 );
