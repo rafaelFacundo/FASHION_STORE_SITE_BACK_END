@@ -1,16 +1,10 @@
 import mongoose from "mongoose";
-
 import "dotenv/config";
-import Product from "./models/Product.js";
+import express from "express";
 
-const updateProductsDocuments = async () => {
-  await Product.updateMany(
-    {},
-    {
-      $set: { mainNews: false, mainProduct: false },
-    }
-  );
-};
+const app = express();
+
+app.use(express.json());
 
 const connectToDBAndUploadDocuments = async () => {
   try {
